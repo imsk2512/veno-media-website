@@ -1,58 +1,120 @@
-import { Analytics } from '@vercel/analytics/next'
-import type { Metadata, Viewport } from 'next'
-import { Inter, Geist_Mono } from 'next/font/google'
-import './globals.css'
+import { Analytics } from "@vercel/analytics/next";
+import type { Metadata, Viewport } from "next";
+import { Inter, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-  display: 'swap',
-})
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Veno Media — Where Creativity Meets Growth',
-  description:
-    'Veno Media is a premium creative marketing agency helping ambitious brands scale through strategic content, social media management, influencer marketing, branding, video production, and performance-driven campaigns.',
-  keywords: [
-    'marketing agency',
-    'creative agency',
-    'social media management',
-    'influencer marketing',
-    'brand strategy',
-    'performance marketing',
-    'video production',
-    'SEO',
-    'Veno Media',
-  ],
-  generator: 'v0.app',
-  openGraph: {
-    title: 'Veno Media — Where Creativity Meets Growth',
-    description:
-      'A premium creative marketing agency helping ambitious brands grow through creativity, strategy, and measurable performance.',
-    type: 'website',
+  metadataBase: new URL("https://venomedia.in"),
+
+  title: {
+    default: "Veno Media | Premium Creative Marketing Agency",
+    template: "%s | Veno Media",
   },
-}
+
+  description:
+    "Veno Media helps ambitious brands grow through influencer marketing, social media management, branding, premium content creation, video production, and performance marketing.",
+
+  keywords: [
+    "Veno Media",
+    "Marketing Agency",
+    "Influencer Marketing",
+    "Social Media Agency",
+    "Branding Agency",
+    "Video Production",
+    "Performance Marketing",
+    "Creative Agency India",
+    "Digital Marketing",
+    "Content Creation",
+  ],
+
+  authors: [
+    {
+      name: "Salman Khan",
+    },
+  ],
+
+  creator: "Salman Khan",
+
+  publisher: "Veno Media",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "Veno Media | Premium Creative Marketing Agency",
+    description:
+      "Helping ambitious brands grow through influencer marketing, branding, premium content, and performance-driven campaigns.",
+
+    url: "https://venomedia.in",
+
+    siteName: "Veno Media",
+
+    locale: "en_US",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Veno Media",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Veno Media",
+    description:
+      "Premium Creative Marketing Agency helping brands scale.",
+    images: ["/og-image.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#0d2e73',
-}
+  themeColor: "#123D9A",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${geistMono.variable} bg-background`}>
-      <body className="font-sans antialiased">
+    <html
+      lang="en"
+      className={`${inter.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans antialiased bg-background text-foreground">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
-  )
+  );
 }

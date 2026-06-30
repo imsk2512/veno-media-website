@@ -22,7 +22,7 @@ const marqueeItems = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-24 pb-12 sm:pt-32 lg:pt-40 lg:pb-20">
+    <section id="top" className="relative overflow-hidden pt-28 pb-12 sm:pt-32 lg:pt-40 lg:pb-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_35%,rgba(25,198,212,0.16),transparent_38%)]" />
 
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -95,7 +95,7 @@ export function Hero() {
                   width={1000}
                   height={780}
                   priority
-                  className="aspect-[4/5] w-full object-cover sm:aspect-auto"
+                  className="aspect-[16/11] w-full object-cover sm:aspect-auto"
                 />
               </div>
 
