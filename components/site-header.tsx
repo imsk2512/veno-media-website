@@ -42,7 +42,7 @@ export function SiteHeader() {
             'mx-auto flex max-w-7xl items-center justify-between px-5 py-4 transition-all duration-300 sm:px-6 lg:px-8',
             scrolled
               ? 'border-b border-white/20 bg-white/90 shadow-lg backdrop-blur-xl'
-              : 'bg-white/80 backdrop-blur-md'
+              : 'bg-white/100 backdrop-blur-md'
           )}
         >
           <a href="#top" aria-label="Veno Media home">
