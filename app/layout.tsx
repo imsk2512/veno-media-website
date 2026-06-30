@@ -133,10 +133,28 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-sans antialiased bg-background text-foreground">
-        {children}
 
-        {process.env.NODE_ENV === "production" && <Analytics />}
-      </body>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Veno Media",
+        url: "https://venomedia.in",
+        logo: "https://venomedia.in/veno-media-logo.png",
+        sameAs: [
+          "https://www.linkedin.com/company/veno-media/",
+          "https://www.instagram.com/venomedia.in"
+        ]
+      }),
+    }}
+  />
+
+  {children}
+
+  {process.env.NODE_ENV === "production" && <Analytics />}
+</body>
     </html>
   );
 }
