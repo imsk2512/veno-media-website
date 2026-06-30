@@ -14,11 +14,11 @@ export function Founder() {
   return (
     <section id="founder" className="relative scroll-mt-24 bg-muted py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          <Reveal className="relative">
+        <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
+          <Reveal className="relative flex items-start gap-5 lg:block">
             <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_50%_30%,rgba(25,198,212,0.22),transparent_65%)] blur-2xl" />
 
-            <div className="mx-auto max-w-sm overflow-hidden rounded-3xl border border-border bg-card shadow-soft lg:max-w-none lg:rounded-[1.6rem]">
+            <div className="w-32 shrink-0 overflow-hidden rounded-3xl border border-border bg-card shadow-soft lg:mx-auto lg:max-w-none lg:w-auto lg:rounded-[1.6rem]">
               <Image
                 src="/founder.png"
                 alt="Salman Khan"
@@ -29,16 +29,16 @@ export function Founder() {
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent sm:text-sm">
+         <Reveal delay={120} className="-mt-2 lg:mt-0">
+           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
               Founder
             </p>
 
-            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-semibold text-foreground lg:mt-3 lg:text-4xl">
               Salman Khan
             </h2>
 
-            <p className="mt-2 text-base font-medium text-secondary sm:text-lg">
+            <p className="mt-1 text-sm font-medium text-secondary lg:mt-2 lg:text-lg">
               Founder & CEO
             </p>
 
