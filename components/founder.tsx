@@ -4,10 +4,10 @@ import { Reveal } from '@/components/reveal'
 import { InstagramIcon, LinkedinIcon, WhatsappIcon } from '@/components/social-icons'
 
 const socials = [
-  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com' },
-  { icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.com' },
-  { icon: WhatsappIcon, label: 'WhatsApp', href: 'https://wa.me/0000000000' },
-  { icon: Mail, label: 'Email', href: 'mailto:hello@venomedia.com' },
+  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com/in/salman-khan-4aab39406' },
+  { icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.comhttps://www.instagram.com/venomedia.in?igsh=d2N6bnBhbzNvOWpk&utm_source=qr' },
+  { icon: WhatsappIcon, label: 'WhatsApp', href: 'https://wa.me/771073210' },
+  { icon: Mail, label: 'Email', href: 'mailto:sk@venomedia.in' },
 ]
 
 export function Founder() {

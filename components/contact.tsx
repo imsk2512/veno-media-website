@@ -6,10 +6,10 @@ import { Reveal } from '@/components/reveal'
 import { InstagramIcon, LinkedinIcon, WhatsappIcon } from '@/components/social-icons'
 
 const channels = [
-  { icon: WhatsappIcon, label: 'WhatsApp', value: 'Chat with us', href: 'https://wa.me/0000000000' },
-  { icon: InstagramIcon, label: 'Instagram', value: '@venomedia', href: 'https://www.instagram.com' },
-  { icon: LinkedinIcon, label: 'LinkedIn', value: 'Veno Media', href: 'https://www.linkedin.com' },
-  { icon: Mail, label: 'Email', value: 'hello@venomedia.com', href: 'mailto:hello@venomedia.com' },
+  { icon: WhatsappIcon, label: 'WhatsApp', value: 'Chat with us', href: 'https://wa.me/7589011809' },
+  { icon: InstagramIcon, label: 'Instagram', value: '@venomedia.in', href: 'https://www.instagram.com/venomedia.in?igsh=d2N6bnBhbzNvOWpk&utm_source=qr' },
+  { icon: LinkedinIcon, label: 'LinkedIn', value: 'Veno Media', href: 'https://www.linkedin.com/company/veno-media' },
+  { icon: Mail, label: 'Email', value: 'hello@venomedia.in', href: 'mailto:hello@venomedia.com' },
 ]
 
 const fields = [

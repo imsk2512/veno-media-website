@@ -19,10 +19,10 @@ const services = [
 ]
 
 const socials = [
-  { icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.com' },
-  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com' },
-  { icon: WhatsappIcon, label: 'WhatsApp', href: 'https://wa.me/0000000000' },
-  { icon: Mail, label: 'Email', href: 'mailto:hello@venomedia.com' },
+  { icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.comhttps://www.instagram.com/venomedia.in?igsh=d2N6bnBhbzNvOWpk&utm_source=qr' },
+  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com/company/veno-media' },
+  { icon: WhatsappIcon, label: 'WhatsApp', href: 'https://wa.me/7589011809' },
+  { icon: Mail, label: 'Email', href: 'mailto:hello@venomedia.in' },
 ]
 
 export function SiteFooter() {
@@ -89,7 +89,7 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2.5">
               <li>
                 <a
-                  href="mailto:hello@venomedia.com"
+                  href="mailto:hello@venomedia.in"
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent"
                 >
                   <Mail className="h-4 w-4" />
