@@ -4,24 +4,25 @@ import { InstagramIcon, LinkedinIcon, WhatsappIcon } from '@/components/social-i
 
 const quickLinks = [
   { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
   { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Why Veno', href: '#why' },
+  { label: 'Why Veno', href: '#why-veno' },
   { label: 'Founder', href: '#founder' },
   { label: 'Contact', href: '#contact' },
 ]
 
 const services = [
-  'Social Media Management',
-  'Content & Video',
   'Influencer Marketing',
-  'Paid Advertising',
-  'SEO & Performance',
+  'Social Media Management',
+  'Video Production',
+  'Brand Identity',
+  'Performance Marketing',
 ]
 
 const socials = [
-  { icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.comhttps://www.instagram.com/venomedia.in?igsh=d2N6bnBhbzNvOWpk&utm_source=qr' },
-  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com/company/veno-media' },
-  { icon: WhatsappIcon, label: 'WhatsApp', href: 'https://wa.me/7589011809' },
+  { icon: InstagramIcon, label: 'Instagram', href: 'https://www.instagram.com/venomedia.in' },
+  { icon: LinkedinIcon, label: 'LinkedIn', href: 'https://www.linkedin.com/company/veno-media/' },
+  { icon: WhatsappIcon, label: 'WhatsApp', href: 'https://wa.me/917589011809' },
   { icon: Mail, label: 'Email', href: 'mailto:hello@venomedia.in' },
 ]
 
@@ -33,9 +34,10 @@ export function SiteFooter() {
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-pretty leading-relaxed text-muted-foreground">
-              A premium creative marketing agency helping ambitious brands grow through creativity,
-              strategy, and measurable performance.
+              Premium creative & influencer marketing agency helping ambitious brands grow through
+              strategy, content, and performance-driven campaigns.
             </p>
+
             <div className="mt-6 flex gap-2">
               {socials.map((s) => (
                 <a
@@ -57,10 +59,7 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-accent"
-                  >
+                  <a href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-accent">
                     {link.label}
                   </a>
                 </li>
@@ -73,10 +72,7 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2.5">
               {services.map((service) => (
                 <li key={service}>
-                  <a
-                    href="#services"
-                    className="text-sm text-muted-foreground transition-colors hover:text-accent"
-                  >
+                  <a href="#services" className="text-sm text-muted-foreground transition-colors hover:text-accent">
                     {service}
                   </a>
                 </li>
@@ -93,16 +89,16 @@ export function SiteFooter() {
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent"
                 >
                   <Mail className="h-4 w-4" />
-                  hello@venomedia.com
+                  hello@venomedia.in
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+10000000000"
+                  href="tel:+917589011809"
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent"
                 >
                   <Phone className="h-4 w-4" />
-                  +1 (555) 000-0000
+                  +91 75890 11809
                 </a>
               </li>
             </ul>
@@ -110,9 +106,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
-          <p className="text-sm text-muted-foreground">
-            © 2026 Veno Media. All Rights Reserved.
-          </p>
+          <p className="text-sm text-muted-foreground">© 2026 Veno Media. All Rights Reserved.</p>
           <p className="text-sm text-muted-foreground">Where Creativity Meets Growth.</p>
         </div>
       </div>

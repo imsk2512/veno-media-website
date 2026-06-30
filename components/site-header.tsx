@@ -9,7 +9,7 @@ const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Why Veno', href: '#why' },
+  { label: 'Why Veno', href: '#why-veno' },
   { label: 'Founder', href: '#founder' },
   { label: 'Contact', href: '#contact' },
 ]

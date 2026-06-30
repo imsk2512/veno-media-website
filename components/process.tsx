@@ -1,76 +1,117 @@
-import { PhoneCall, Lightbulb, Clapperboard, Rocket, TrendingUp } from 'lucide-react'
+import { Search, Lightbulb, Clapperboard, Rocket, BarChart3 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 
 const steps = [
   {
-    n: '01',
-    icon: PhoneCall,
-    title: 'Discovery Call',
-    text: 'We learn your brand, goals, and challenges to align on what success looks like.',
+    number: '01',
+    icon: Search,
+    title: 'Discover',
+    heading: 'Understand Your Brand',
+    description:
+      'We study your business, audience, goals, and competitors to find the right growth direction.',
   },
   {
-    n: '02',
+    number: '02',
     icon: Lightbulb,
     title: 'Strategy',
-    text: 'A tailored marketing roadmap built around your audience and objectives.',
+    heading: 'Build the Growth Plan',
+    description:
+      'We create a clear roadmap for content, branding, influencer campaigns, and performance marketing.',
   },
   {
-    n: '03',
+    number: '03',
     icon: Clapperboard,
-    title: 'Content Production',
-    text: 'Premium creative and content crafted to bring the strategy to life.',
+    title: 'Create',
+    heading: 'Content That Converts',
+    description:
+      'We produce premium creatives, reels, videos, and campaign assets designed to capture attention.',
   },
   {
-    n: '04',
+    number: '04',
     icon: Rocket,
-    title: 'Campaign Launch',
-    text: 'We deploy across the right channels with precision and consistency.',
+    title: 'Launch',
+    heading: 'Execute Across Channels',
+    description:
+      'We launch campaigns on the right platforms with clean execution and consistent optimization.',
   },
   {
-    n: '05',
-    icon: TrendingUp,
-    title: 'Growth Optimization',
-    text: 'Continuous testing and reporting to compound results over time.',
+    number: '05',
+    icon: BarChart3,
+    title: 'Scale',
+    heading: 'Measure. Improve. Grow.',
+    description:
+      'We track performance, refine campaigns, and scale what works to drive measurable business results.',
   },
 ]
 
 export function Process() {
   return (
-    <section className="relative scroll-mt-24 bg-muted py-20 sm:py-28">
+    <section id="process" className="relative overflow-hidden py-24">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_30%,rgba(25,198,212,0.12),transparent_40%)]" />
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-            How We Work
-          </p>
-          <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-            Our Process
-          </h2>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            A proven five-step framework that turns ideas into measurable growth.
-          </p>
+        <Reveal>
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-700">
+              Our Process
+            </span>
+
+            <h2 className="mt-6 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              A Simple Process.
+              <span className="text-gradient"> Powerful Results.</span>
+            </h2>
+
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+              From strategy to execution, every step is designed to deliver measurable growth and long-term brand success.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="relative mt-16">
-          {/* connecting line */}
-          <div
-            aria-hidden="true"
-            className="absolute left-6 top-0 h-full w-px bg-gradient-to-b from-accent via-secondary to-transparent lg:left-0 lg:top-12 lg:h-px lg:w-full lg:bg-gradient-to-r"
-          />
-          <ol className="grid gap-8 lg:grid-cols-5">
-            {steps.map((step, i) => (
-              <Reveal as="li" key={step.n} delay={i * 90} className="relative pl-16 lg:pl-0">
-                <div className="flex items-center gap-4 lg:flex-col lg:items-start">
-                  <span className="absolute left-0 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-gradient text-white shadow-glow lg:relative lg:mb-5">
-                    <step.icon className="h-5 w-5" />
-                  </span>
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+          {steps.map((step, index) => {
+            const Icon = step.icon
+
+            return (
+              <Reveal key={step.number} delay={index * 80}>
+                <div className="group relative h-full rounded-3xl border border-border bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-soft">
+                  <div className="mb-6 flex items-center justify-between">
+                    <span className="text-sm font-semibold text-muted-foreground">{step.number}</span>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-gradient text-white shadow-sm transition-transform duration-300 group-hover:scale-110">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                  </div>
+
+                  <p className="text-sm font-semibold text-cyan-600">{step.title}</p>
+
+                  <h3 className="mt-3 text-xl font-semibold text-foreground">
+                    {step.heading}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-6 text-muted-foreground">
+                    {step.description}
+                  </p>
                 </div>
-                <span className="font-mono text-sm font-semibold text-accent">{step.n}</span>
-                <h3 className="mt-1 text-lg font-semibold text-foreground">{step.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{step.text}</p>
               </Reveal>
-            ))}
-          </ol>
+            )
+          })}
         </div>
+
+        <Reveal delay={420}>
+          <div className="mt-14 rounded-3xl border border-border bg-white p-8 text-center shadow-sm">
+            <h3 className="text-2xl font-semibold text-foreground">
+              Ready to grow your brand?
+            </h3>
+            <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+              Let&apos;s turn your vision into measurable business growth with creative strategy and performance-driven execution.
+            </p>
+            <a
+              href="#contact"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-gradient px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:brightness-110"
+            >
+              Start Your Project →
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

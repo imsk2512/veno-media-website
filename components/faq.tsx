@@ -1,84 +1,111 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Plus } from 'lucide-react'
-import { Reveal } from '@/components/reveal'
-import { cn } from '@/lib/utils'
+import { useState } from "react";
+import { Plus } from "lucide-react";
 
 const faqs = [
   {
-    q: 'How long does a project take?',
-    a: 'Timelines depend on scope. One-off projects like a brand identity or website typically run a few weeks, while ongoing marketing partnerships begin delivering within the first month and compound from there. We confirm a clear timeline during your strategy call.',
+    question: "How long does a project take?",
+    answer:
+      "Timelines depend on the project scope. One-off branding or creative projects usually take a few weeks, while ongoing marketing partnerships begin delivering measurable results within the first month.",
   },
   {
-    q: 'Do you work with international clients?',
-    a: 'Yes. We partner with brands worldwide and structure communication and reporting around your time zone, so collaboration stays smooth no matter where you are based.',
+    question: "Do you work with international clients?",
+    answer:
+      "Yes. We collaborate with brands worldwide through online meetings, structured workflows, and seamless communication.",
   },
   {
-    q: 'Do you offer monthly marketing packages?',
-    a: 'We do. Our retainer packages cover strategy, content production, channel management, and performance reporting, tailored to your goals and scaled to your stage of growth.',
+    question: "Do you offer monthly marketing packages?",
+    answer:
+      "Absolutely. We offer flexible monthly plans for social media management, influencer marketing, branding, video production, and performance marketing.",
   },
   {
-    q: 'Do you provide influencer marketing?',
-    a: 'Absolutely. We identify and manage vetted creator partnerships end to end — from outreach and briefing to content approval and performance tracking.',
+    question: "Do you provide influencer marketing?",
+    answer:
+      "Yes. From creator selection and campaign planning to execution and reporting, we manage complete influencer marketing campaigns.",
   },
   {
-    q: 'How do we get started?',
-    a: 'Book a free strategy call. We will discuss your goals, audit where you stand today, and outline a tailored plan to move you forward. There is no obligation to continue.',
+    question: "How do we get started?",
+    answer:
+      "Simply book a discovery call or contact us through our website. We'll understand your goals and recommend the best strategy for your brand.",
   },
-]
+];
 
 export function Faq() {
-  const [open, setOpen] = useState<number | null>(0)
+  const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="relative scroll-mt-24 bg-muted py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <Reveal className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-            Frequently Asked Questions
+    <section id="faq" className="bg-[#F8FAFC] py-24">
+      <div className="mx-auto max-w-5xl px-6">
+
+        <div className="text-center">
+          <p className="text-sm font-bold uppercase tracking-[0.45em] text-cyan-500">
+            FREQUENTLY ASKED QUESTIONS
           </p>
-          <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
+
+          <h2 className="mt-6 text-5xl font-bold tracking-tight text-slate-900">
             Everything You Need to Know
           </h2>
-        </Reveal>
+        </div>
 
-        <div className="mt-12 flex flex-col gap-3">
-          {faqs.map((faq, i) => {
-            const isOpen = open === i
+        <div className="mt-20 space-y-6">
+
+          {faqs.map((item, index) => {
+
+            const isOpen = open === index;
+
             return (
-              <Reveal key={faq.q} delay={i * 60}>
-                <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="text-base font-semibold text-foreground">{faq.q}</span>
-                    <Plus
-                      className={cn(
-                        'h-5 w-5 shrink-0 text-accent transition-transform duration-300',
-                        isOpen && 'rotate-45',
-                      )}
-                    />
-                  </button>
-                  <div
-                    className={cn(
-                      'grid transition-all duration-300 ease-out',
-                      isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0',
-                    )}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="px-6 pb-6 leading-relaxed text-muted-foreground">{faq.a}</p>
+
+              <div
+                key={index}
+                onMouseEnter={() => setOpen(index)}
+                onMouseLeave={() => setOpen(null)}
+                className="cursor-pointer rounded-[32px] border border-slate-200 bg-white px-10 py-8 shadow-sm transition-all duration-500 ease-in-out hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl"
+              >
+
+                <div className="flex items-center justify-between">
+
+                  <h3 className="text-2xl font-semibold text-slate-900">
+                    {item.question}
+                  </h3>
+
+                  <Plus
+                    className={`h-8 w-8 text-cyan-500 transition-all duration-500 ${
+                      isOpen ? "rotate-45" : "rotate-0"
+                    }`}
+                  />
+
+                </div>
+
+                <div
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100 mt-8"
+                      : "grid-rows-[0fr] opacity-0 mt-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+
+                    <div className="border-t border-slate-200 pt-8">
+
+                      <p className="text-lg leading-8 text-slate-500">
+                        {item.answer}
+                      </p>
+
                     </div>
+
                   </div>
                 </div>
-              </Reveal>
-            )
+
+              </div>
+
+            );
+
           })}
+
         </div>
+
       </div>
     </section>
-  )
+  );
 }

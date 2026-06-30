@@ -37,15 +37,16 @@ export function Founder() {
 
             <div className="mt-6 space-y-4 text-pretty text-lg leading-relaxed text-muted-foreground">
               <p>
-                Salman founded Veno Media with a simple conviction: great marketing is the
-                intersection of bold creativity and disciplined strategy. He has spent his career
-                helping brands cut through the noise and turn attention into lasting growth.
-              </p>
-              <p>
-                Today he leads a team of strategists, creators, and performance marketers who treat
-                every client&apos;s growth as their own — combining craft, data, and a relentless
-                focus on results.
-              </p>
+  I'm Salman Khan, Founder of Veno Media. We help ambitious brands grow through
+  influencer marketing, premium content, branding, and performance-driven digital
+  campaigns. Every strategy we create is focused on measurable business growth.
+</p>
+
+<p>
+  Today, I lead a team of strategists, creators, and performance marketers
+  dedicated to helping brands stand out, build trust, and achieve long-term
+  success through creativity, data, and results-driven execution.
+</p>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
