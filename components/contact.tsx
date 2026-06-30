@@ -1,5 +1,6 @@
 import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
-import { InstagramIcon, LinkedinIcon } from "@/components/social-icons";;
+import { InstagramIcon, LinkedinIcon } from "@/components/social-icons";
+
 const contactLinks = [
   {
     icon: MessageCircle,
@@ -7,18 +8,18 @@ const contactLinks = [
     value: "Chat with us",
     href: "https://wa.me/917589011809",
   },
- {
-  icon: InstagramIcon,
-  label: "Instagram",
-  value: "@venomedia.in",
-  href: "https://www.instagram.com/venomedia.in",
-},
   {
-  icon: LinkedinIcon,
-  label: "LinkedIn",
-  value: "Veno Media",
-  href: "https://www.linkedin.com/company/veno-media/",
-},
+    icon: InstagramIcon,
+    label: "Instagram",
+    value: "@venomedia.in",
+    href: "https://www.instagram.com/venomedia.in",
+  },
+  {
+    icon: LinkedinIcon,
+    label: "LinkedIn",
+    value: "Veno Media",
+    href: "https://www.linkedin.com/company/veno-media/",
+  },
   {
     icon: Mail,
     label: "Email",
@@ -29,25 +30,25 @@ const contactLinks = [
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="rounded-[36px] bg-gradient-to-br from-[#143C8F] to-[#0B2A68] p-8 shadow-2xl lg:p-14">
-          <div className="grid gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+    <section id="contact" className="bg-white py-16 sm:py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="rounded-3xl bg-gradient-to-br from-[#143C8F] to-[#0B2A68] p-5 shadow-2xl sm:p-8 lg:rounded-[36px] lg:p-14">
+          <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-12">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.45em] text-cyan-300">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-300 sm:text-sm sm:tracking-[0.45em]">
                 Get In Touch
               </p>
 
-              <h2 className="mt-8 max-w-xl text-4xl font-bold leading-tight text-white sm:text-5xl">
-                Let's Build Your Next Growth Story.
+              <h2 className="mt-6 max-w-xl text-3xl font-bold leading-tight text-white sm:text-4xl lg:mt-8 lg:text-5xl">
+                Let&apos;s Build Your Next Growth Story.
               </h2>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-blue-100">
-                Tell us about your business, goals, or campaign. We'll
+              <p className="mt-5 max-w-xl text-base leading-7 text-blue-100 sm:text-lg sm:leading-8">
+                Tell us about your business, goals, or campaign. We&apos;ll
                 create a custom strategy designed to help your brand grow faster.
               </p>
 
-              <div className="mt-12 grid gap-5 sm:grid-cols-2">
+              <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 lg:mt-12">
                 {contactLinks.map((item) => {
                   const Icon = item.icon;
 
@@ -57,17 +58,17 @@ export function Contact() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center gap-5 rounded-3xl border border-white/15 bg-white/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-white/10"
+                      className="group flex items-center gap-4 rounded-2xl border border-white/15 bg-white/5 p-4 transition-all duration-300 hover:border-cyan-300 hover:bg-white/10 sm:rounded-3xl sm:p-5 lg:hover:-translate-y-1"
                     >
-                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-cyan-300">
-                        <Icon className="h-6 w-6" />
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-cyan-300 sm:h-12 sm:w-12 sm:rounded-2xl">
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                       </span>
 
                       <span>
-                        <span className="block text-sm text-blue-200">
+                        <span className="block text-xs text-blue-200 sm:text-sm">
                           {item.label}
                         </span>
-                        <span className="block font-semibold text-white">
+                        <span className="block text-sm font-semibold text-white sm:text-base">
                           {item.value}
                         </span>
                       </span>
@@ -76,14 +77,14 @@ export function Contact() {
                 })}
               </div>
 
-              <p className="mt-8 flex items-center gap-3 text-sm text-blue-100">
+              <p className="mt-6 flex items-center gap-3 text-xs text-blue-100 sm:mt-8 sm:text-sm">
                 <span className="h-2.5 w-2.5 rounded-full bg-cyan-300" />
                 Typically replies within 24 hours.
               </p>
             </div>
 
-            <form className="rounded-[32px] bg-white p-8 shadow-xl lg:p-10">
-              <div className="grid gap-6 sm:grid-cols-2">
+            <form className="rounded-3xl bg-white p-5 shadow-xl sm:p-8 lg:rounded-[32px] lg:p-10">
+              <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
                 <div>
                   <label className="text-sm font-semibold text-slate-900">
                     Name
@@ -91,7 +92,7 @@ export function Contact() {
                   <input
                     type="text"
                     placeholder="Your full name"
-                    className="mt-3 w-full rounded-full border border-slate-200 bg-slate-50 px-5 py-4 text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white"
+                    className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
                   />
                 </div>
 
@@ -102,7 +103,7 @@ export function Contact() {
                   <input
                     type="email"
                     placeholder="you@example.com"
-                    className="mt-3 w-full rounded-full border border-slate-200 bg-slate-50 px-5 py-4 text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white"
+                    className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
                   />
                 </div>
 
@@ -113,7 +114,7 @@ export function Contact() {
                   <input
                     type="tel"
                     placeholder="+91 XXXXX XXXXX"
-                    className="mt-3 w-full rounded-full border border-slate-200 bg-slate-50 px-5 py-4 text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white"
+                    className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
                   />
                 </div>
 
@@ -124,25 +125,25 @@ export function Contact() {
                   <input
                     type="text"
                     placeholder="Company / Brand Name"
-                    className="mt-3 w-full rounded-full border border-slate-200 bg-slate-50 px-5 py-4 text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white"
+                    className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
                   />
                 </div>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-5 sm:mt-6">
                 <label className="text-sm font-semibold text-slate-900">
                   Project Details
                 </label>
                 <textarea
                   placeholder="Tell us about your brand, goals, services, timeline and budget..."
                   rows={5}
-                  className="mt-3 w-full resize-none rounded-[28px] border border-slate-200 bg-slate-50 px-5 py-4 text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white"
+                  className="mt-2.5 w-full resize-none rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:rounded-[28px] sm:px-5 sm:py-4 sm:text-base"
                 />
               </div>
 
               <button
                 type="submit"
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#143C8F] to-cyan-500 px-7 py-4 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#143C8F] to-cyan-500 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-xl sm:mt-8 sm:px-7 sm:py-4 sm:text-base lg:hover:scale-[1.02]"
               >
                 Schedule a Discovery Call
                 <ArrowUpRight className="h-5 w-5" />

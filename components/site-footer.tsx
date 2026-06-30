@@ -29,16 +29,17 @@ const socials = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-card">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div>
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Logo />
-            <p className="mt-4 max-w-xs text-pretty leading-relaxed text-muted-foreground">
+
+            <p className="mt-4 max-w-md text-sm leading-7 text-muted-foreground sm:text-base">
               Premium creative & influencer marketing agency helping ambitious brands grow through
               strategy, content, and performance-driven campaigns.
             </p>
 
-            <div className="mt-6 flex gap-2">
+            <div className="mt-6 flex flex-wrap gap-2">
               {socials.map((s) => (
                 <a
                   key={s.label}
@@ -59,7 +60,10 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-accent">
+                  <a
+                    href={link.href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-accent"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -72,7 +76,10 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2.5">
               {services.map((service) => (
                 <li key={service}>
-                  <a href="#services" className="text-sm text-muted-foreground transition-colors hover:text-accent">
+                  <a
+                    href="#services"
+                    className="text-sm text-muted-foreground transition-colors hover:text-accent"
+                  >
                     {service}
                   </a>
                 </li>
@@ -88,16 +95,17 @@ export function SiteFooter() {
                   href="mailto:hello@venomedia.in"
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent"
                 >
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4 w-4 shrink-0" />
                   hello@venomedia.in
                 </a>
               </li>
+
               <li>
                 <a
                   href="tel:+917589011809"
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-4 w-4 shrink-0" />
                   +91 75890 11809
                 </a>
               </li>
@@ -105,9 +113,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
-          <p className="text-sm text-muted-foreground">© 2026 Veno Media. All Rights Reserved.</p>
-          <p className="text-sm text-muted-foreground">Where Creativity Meets Growth.</p>
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:mt-12 sm:flex-row sm:items-center sm:pt-8">
+          <p>© 2026 Veno Media. All Rights Reserved.</p>
+          <p>Where Creativity Meets Growth.</p>
         </div>
       </div>
     </footer>

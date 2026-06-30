@@ -21,35 +21,49 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="about" className="relative scroll-mt-24 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+    <section
+      id="about"
+      className="relative scroll-mt-24 py-16 sm:py-20 lg:py-28"
+    >
+      <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent sm:text-sm">
                 About Veno Media
               </p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-                More Than an Agency. We&apos;re Your Growth Partner.
+
+              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                More Than an Agency.
+                <br className="hidden sm:block" />
+                We&apos;re Your Growth Partner.
               </h2>
-              <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-                Veno Media helps ambitious brands grow through creativity, strategy, and measurable
-                marketing performance. We don&apos;t just create content — we build complete
-                marketing systems that generate real business growth.
+
+              <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8">
+                Veno Media helps ambitious brands grow through creativity,
+                strategy, and measurable marketing performance. We don&apos;t
+                just create content—we build complete marketing systems that
+                generate real business growth.
               </p>
             </div>
           </Reveal>
 
-          <div className="flex flex-col gap-4">
+          <div className="space-y-4 sm:space-y-5">
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.title} delay={i * 100}>
-                <div className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-accent/40">
-                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted text-primary transition-colors group-hover:bg-brand-gradient group-hover:text-white">
+                <div className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft transition-all duration-300 hover:border-accent/40 hover:shadow-lg sm:p-6 lg:hover:-translate-y-1">
+                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted text-primary transition-all duration-300 group-hover:bg-brand-gradient group-hover:text-white">
                     <pillar.icon className="h-5 w-5" />
                   </span>
+
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">{pillar.title}</h3>
-                    <p className="mt-1 leading-relaxed text-muted-foreground">{pillar.text}</p>
+                    <h3 className="text-lg font-semibold text-foreground sm:text-xl">
+                      {pillar.title}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-7 text-muted-foreground sm:text-base">
+                      {pillar.text}
+                    </p>
                   </div>
                 </div>
               </Reveal>
