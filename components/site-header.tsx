@@ -62,7 +62,7 @@ export function SiteHeader() {
             className="group inline-flex items-center gap-2 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all duration-300 hover:shadow-glow hover:brightness-110"
           >
             <PhoneCall className="h-4 w-4" />
-            Book a Free Strategy Call
+            Book a Discovery Call
           </a>
         </div>
 
