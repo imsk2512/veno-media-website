@@ -9,7 +9,7 @@ export function Logo({ className, light = false }: { className?: string; light?:
   alt="Veno Media"
   width={40}
   height={40}
-  className="h-9 w-9 object-contain bg-transparent"
+  className="h- w-10 object-contain bg-transparent"
  />
 
       <span
