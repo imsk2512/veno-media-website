@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 
 const faqs = [
@@ -33,6 +33,18 @@ const faqs = [
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <section id="faq" className="bg-[#F8FAFC] py-24">
@@ -43,7 +55,7 @@ export function Faq() {
             FREQUENTLY ASKED QUESTIONS
           </p>
 
-          <h2 className="mt-6 text-5xl font-bold tracking-tight text-slate-900">
+          <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Everything You Need to Know
           </h2>
         </div>
@@ -58,42 +70,41 @@ export function Faq() {
 
               <div
                 key={index}
-                onMouseEnter={() => setOpen(index)}
-                onMouseLeave={() => setOpen(null)}
-                className="cursor-pointer rounded-[32px] border border-slate-200 bg-white px-10 py-8 shadow-sm transition-all duration-500 ease-in-out hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl"
+                onMouseEnter={() => !isMobile && setOpen(index)}
+                onMouseLeave={() => !isMobile && setOpen(null)}
+                onClick={() =>
+                  isMobile && setOpen(open === index ? null : index)
+                }
+                className="cursor-pointer rounded-[32px] border border-slate-200 bg-white px-8 py-7 shadow-sm transition-all duration-300 hover:border-cyan-300 hover:shadow-xl"
               >
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-6">
 
-                  <h3 className="text-2xl font-semibold text-slate-900">
+                  <h3 className="text-xl font-semibold text-slate-900">
                     {item.question}
                   </h3>
 
                   <Plus
-                    className={`h-8 w-8 text-cyan-500 transition-all duration-500 ${
-                      isOpen ? "rotate-45" : "rotate-0"
+                    className={`h-7 w-7 shrink-0 text-cyan-500 transition-transform duration-300 ${
+                      isOpen ? "rotate-45" : ""
                     }`}
                   />
 
                 </div>
 
                 <div
-                  className={`grid transition-all duration-500 ease-in-out ${
+                  className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
                     isOpen
-                      ? "grid-rows-[1fr] opacity-100 mt-8"
-                      : "grid-rows-[0fr] opacity-0 mt-0"
+                      ? "grid-rows-[1fr] opacity-100 mt-6"
+                      : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-
-                    <div className="border-t border-slate-200 pt-8">
-
-                      <p className="text-lg leading-8 text-slate-500">
+                    <div className="border-t border-slate-200 pt-6">
+                      <p className="text-base leading-8 text-slate-500">
                         {item.answer}
                       </p>
-
                     </div>
-
                   </div>
                 </div>
 
