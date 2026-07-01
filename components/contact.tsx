@@ -83,14 +83,32 @@ export function Contact() {
               </p>
             </div>
 
-            <form className="rounded-3xl bg-white p-5 shadow-xl sm:p-8 lg:rounded-[32px] lg:p-10">
+            <form
+              action="https://formsubmit.co/hello@venomedia.in"
+              method="POST"
+              className="rounded-3xl bg-white p-5 shadow-xl sm:p-8 lg:rounded-[32px] lg:p-10"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Lead from Veno Media Website"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://www.venomedia.in/"
+              />
+
               <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
                 <div>
                   <label className="text-sm font-semibold text-slate-900">
                     Name
                   </label>
                   <input
+                    name="name"
                     type="text"
+                    required
                     placeholder="Your full name"
                     className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
                   />
@@ -101,7 +119,9 @@ export function Contact() {
                     Email
                   </label>
                   <input
+                    name="email"
                     type="email"
+                    required
                     placeholder="you@example.com"
                     className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
                   />
@@ -112,7 +132,9 @@ export function Contact() {
                     Phone
                   </label>
                   <input
+                    name="phone"
                     type="tel"
+                    required
                     placeholder="+91 XXXXX XXXXX"
                     className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
                   />
@@ -123,6 +145,7 @@ export function Contact() {
                     Company
                   </label>
                   <input
+                    name="company"
                     type="text"
                     placeholder="Company / Brand Name"
                     className="mt-2.5 w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:px-5 sm:py-4 sm:text-base"
@@ -135,6 +158,8 @@ export function Contact() {
                   Project Details
                 </label>
                 <textarea
+                  name="message"
+                  required
                   placeholder="Tell us about your brand, goals, services, timeline and budget..."
                   rows={5}
                   className="mt-2.5 w-full resize-none rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:bg-white sm:mt-3 sm:rounded-[28px] sm:px-5 sm:py-4 sm:text-base"
