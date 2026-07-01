@@ -84,7 +84,7 @@ export function Contact() {
             </div>
 
             <form
-              action="https://formsubmit.co/hello@venomedia.in"
+              action="https://formsubmit.co/imsk2512@gmail.com"
               method="POST"
               className="rounded-3xl bg-white p-5 shadow-xl sm:p-8 lg:rounded-[32px] lg:p-10"
             >
