@@ -31,7 +31,7 @@ export function Hero() {
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1.5 text-xs font-semibold text-primary shadow-sm sm:px-4 sm:py-2 sm:text-sm">
                 <Sparkles className="h-4 w-4 text-accent" />
-                Premium Creative Growth Agency
+                From Strategy to Success
               </span>
             </Reveal>
 
