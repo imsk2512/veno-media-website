@@ -4,68 +4,84 @@ import { Reveal } from '@/components/reveal'
 
 const projects = [
   {
-    title: 'Luxury Real Estate Campaign',
-    category: 'Real Estate',
-    image: '/portfolio-real-estate.png',
-    result: 'Premium property creatives and lead-focused campaign assets',
-    span: 'lg:col-span-2',
-  },
-  {
-    title: 'Personal Brand System',
-    category: 'Personal Branding',
-    image: '/portfolio-branding.png',
-    result: 'Authority-building content framework for founders and creators',
-    span: '',
-  },
-  {
-    title: 'Restaurant Launch Creatives',
-    category: 'Restaurants',
-    image: '/portfolio-restaurant.png',
-    result: 'Social-first visuals designed for launches and promotions',
-    span: '',
-  },
-  {
-    title: 'Luxury Brand Positioning',
-    category: 'Luxury Brands',
-    image: '/portfolio-luxury.png',
-    result: 'Premium brand visuals crafted for stronger market presence',
-    span: 'lg:col-span-2',
-  },
-  {
-    title: 'Instagram Growth Content',
+    title: 'Social Media Management',
     category: 'Social Media',
     image: '/portfolio-instagram.png',
-    result: 'Reels, carousels, and content systems built for consistency',
+    result:
+      'Content planning, creative posts, reels, captions, and consistent social media management.',
     span: 'lg:col-span-2',
   },
   {
-    title: 'Short-Form Video Editing',
-    category: 'Video Editing',
+    title: 'Meta Ads Campaigns',
+    category: 'Meta Ads',
+    image: '/portfolio-branding.png',
+    result:
+      'Facebook and Instagram advertising creatives and campaign management focused on reaching the right audience.',
+    span: '',
+  },
+  {
+    title: 'Google Ads Campaigns',
+    category: 'Google Ads',
+    image: '/portfolio-real-estate.png',
+    result:
+      'Search advertising campaigns designed to connect businesses with customers actively searching for their services.',
+    span: '',
+  },
+  {
+    title: 'SEO Growth Strategy',
+    category: 'SEO',
+    image: '/portfolio-luxury.png',
+    result:
+      'Keyword research, on-page optimization, content planning, and SEO improvements for better search visibility.',
+    span: 'lg:col-span-2',
+  },
+  {
+    title: 'Social Media Content',
+    category: 'Content Creation',
+    image: '/portfolio-restaurant.png',
+    result:
+      'Social-first graphics, reels, carousels, and promotional content created for modern businesses.',
+    span: 'lg:col-span-2',
+  },
+  {
+    title: 'Business Website',
+    category: 'Website Development',
     image: '/portfolio-video.png',
-    result: 'High-retention edits for Instagram, YouTube Shorts, and ads',
+    result:
+      'Modern responsive websites designed to present services clearly and create a professional online presence.',
     span: '',
   },
 ]
 
-const tags = ['Social Campaigns', 'Brand Content', 'Reels & Shorts', 'Launch Creatives']
+const tags = [
+  'Social Media',
+  'Meta Ads',
+  'Google Ads',
+  'SEO',
+  'Content Creation',
+  'Websites',
+]
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="relative scroll-mt-24 bg-white py-16 sm:py-24 lg:py-28">
+    <section
+      id="portfolio"
+      className="relative scroll-mt-24 bg-white py-16 sm:py-24 lg:py-28"
+    >
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
         <Reveal className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent sm:text-sm">
-              Selected Work
+              Our Work
             </p>
 
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl">
-              Creative Work Built for Growth
+              Digital Work Built for Business Growth
             </h2>
 
             <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-              A curated look at campaign visuals, brand systems, social content, and video assets
-              created for modern businesses.
+              Explore our work across social media management, paid advertising,
+              SEO, content creation, and modern business websites.
             </p>
           </div>
 
@@ -83,7 +99,11 @@ export function Portfolio() {
 
         <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
-            <Reveal key={project.title} delay={(i % 3) * 80} className={project.span}>
+            <Reveal
+              key={project.title}
+              delay={(i % 3) * 80}
+              className={project.span}
+            >
               <article className="group relative h-72 overflow-hidden rounded-3xl border border-border bg-primary shadow-soft sm:h-80">
                 <Image
                   src={project.image}
