@@ -2,48 +2,49 @@ import {
   Megaphone,
   Camera,
   Clapperboard,
-  Palette,
   TrendingUp,
   Users,
   ArrowUpRight,
+  Search,
+  Globe,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Megaphone,
-    title: "Influencer Marketing",
-    description:
-      "Connect your brand with trusted creators to increase reach, engagement, and sales.",
-  },
-  {
     icon: Users,
     title: "Social Media Management",
     description:
-      "We create, manage, and grow your social presence with consistent premium content.",
-  },
-  {
-    icon: Clapperboard,
-    title: "Video Production",
-    description:
-      "High-converting reels, commercials, and brand films crafted for every platform.",
-  },
-  {
-    icon: Palette,
-    title: "Brand Identity",
-    description:
-      "Build a memorable brand through modern design, strategy, and visual storytelling.",
+      "Complete social media management including content planning, posts, reels, captions, hashtags, and audience engagement.",
   },
   {
     icon: TrendingUp,
-    title: "Performance Marketing",
+    title: "Meta Ads",
     description:
-      "ROI-focused paid advertising campaigns designed to generate leads and revenue.",
+      "Targeted Facebook and Instagram ad campaigns designed to generate quality leads, reach, and business growth.",
+  },
+  {
+    icon: Megaphone,
+    title: "Google Ads",
+    description:
+      "Performance-focused Google Ads campaigns that help your business reach high-intent customers and generate quality leads.",
+  },
+  {
+    icon: Search,
+    title: "SEO",
+    description:
+      "SEO strategies designed to improve search rankings, increase organic traffic, and build long-term online visibility.",
   },
   {
     icon: Camera,
     title: "Content Creation",
     description:
-      "Premium product photography, creative shoots, and social-first visual content.",
+      "Creative posts, reels, graphics, and visual content designed to build a professional and engaging online presence.",
+  },
+  {
+    icon: Globe,
+    title: "Website Development",
+    description:
+      "Modern, responsive websites designed to showcase your business and turn visitors into customers.",
   },
 ];
 
@@ -60,13 +61,14 @@ export function Services() {
           </span>
 
           <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:mt-6 sm:text-5xl">
-            Everything Your Brand Needs
-            <span className="text-cyan-500"> To Grow.</span>
+            Digital Marketing That Helps
+            <span className="text-cyan-500"> Your Business Grow.</span>
           </h2>
 
           <p className="mt-5 text-base leading-7 text-slate-500 sm:mt-6 sm:text-lg">
-            From branding and influencer marketing to content production and
-            performance campaigns—we help ambitious brands scale faster.
+            From social media management and paid advertising to SEO and
+            content creation, we help businesses build visibility, generate
+            leads, and grow online.
           </p>
         </div>
 
